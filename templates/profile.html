@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+  <h3>Welcome {{ user.email }}!</h3>
+  <h4>User object: </h4>
+  <pre>{{ user|tojson(indent=2)  }}</pre>
+</div>
+{% endblock %}
