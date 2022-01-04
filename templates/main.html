@@ -24,26 +24,20 @@
       <a class="navbar-brand" href="/">Plusauth Starter</a>
       <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav mr-auto"></ul>
-        {% if(user)  %}
+        {% if(user) %}
         <li class="nav-item navbar-nav">
           <a class="nav-link" href="/profile">
-            Logged in as: {{ user.email }}
+            Logged in as: {{ user.username }}
           </a>
         </li>
-        <a class="nav-link" href="/logout">
-          Logout
-        </a>
-        {%  else  %}
+        <a class="nav-link" href="/logout"> Logout </a>
+        {% else %}
         <li class="nav-item navbar-nav">
-          <a class="nav-link" href="/login">
-            Login
-          </a>
+          <a class="nav-link" href="/login"> Login </a>
         </li>
         {% endif %}
       </div>
     </nav>
-    <main role="main" class="container">
-        {% block content %}{% endblock %}
-    </main>
+    <main role="main" class="container">{% block content %}{% endblock %}</main>
   </body>
 </html>
